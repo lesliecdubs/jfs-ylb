@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/canvas-drw/image_optim_bin.git
-  revision: ab90169b1645c7ebde9959f2d7c72b232487faa6
-  specs:
-    image_optim_bin (0.0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -160,7 +154,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  image_optim_bin!
   middleman (~> 3.3.10)
   middleman-google-analytics
   middleman-imageoptim

@@ -1,0 +1,7 @@
+{
+  "name": "Canvas Middleman Template",
+  "description": "A template for Middleman to create static sites",
+  "repository": "https://github.com/canvasnyc/canvas-middleman-template.git",
+  "logo": "http://canvas.is/images/logo_icons2.png",
+  "keywords": ["middleman", "heroku", "static"]
+}

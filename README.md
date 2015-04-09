@@ -1,5 +1,7 @@
 # Canvas Middleman Template
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 This is the template for building Middleman static sites.
 
 ##Dependencies

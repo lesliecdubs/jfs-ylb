@@ -6,6 +6,7 @@ ruby '2.1.2'
 
 gem "middleman", "~>3.3.10"
 gem 'middleman-imageoptim'
+gem "middleman-google-analytics"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

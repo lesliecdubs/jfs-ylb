@@ -37,6 +37,10 @@
 
 activate :directory_indexes
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-XXXXXXX-X' # Replace with your property ID.
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload

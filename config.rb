@@ -35,8 +35,6 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-activate :gzip
-
 activate :directory_indexes
 
 # Reload the browser automatically whenever files change
@@ -73,6 +71,8 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  activate :gzip
 
   activate :imageoptim
 end

@@ -2,6 +2,8 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 gem "middleman", "~>3.3.10"
 gem 'middleman-imageoptim'
 
@@ -16,3 +18,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
+
+# Heroku Deployment
+gem 'rack-contrib'
+gem 'puma'

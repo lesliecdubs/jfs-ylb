@@ -22,4 +22,4 @@ gem 'oj' # faster JS compiles
 # Heroku Deployment
 gem 'rack-contrib'
 gem 'puma'
-gem 'image_optim_bin'
+gem 'image_optim_bin', github: 'canvas-drw/image_optim_bin'

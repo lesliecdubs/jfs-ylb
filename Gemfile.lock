@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/canvas-drw/image_optim_bin.git
+  revision: ab90169b1645c7ebde9959f2d7c72b232487faa6
+  specs:
+    image_optim_bin (0.0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,7 +55,6 @@ GEM
       image_size (~> 1.3)
       in_threads (~> 1.3)
       progress (~> 3.0, >= 3.0.1)
-    image_optim_bin (0.0.6)
     image_optim_pack (0.2.1.20150407)
       fspath (~> 2.1)
       image_optim (~> 0.19)
@@ -152,7 +157,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  image_optim_bin
+  image_optim_bin!
   middleman (~> 3.3.10)
   middleman-imageoptim
   middleman-livereload (~> 3.1.0)

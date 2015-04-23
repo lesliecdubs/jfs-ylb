@@ -35,6 +35,7 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+# Clean URLs
 activate :directory_indexes
 
 activate :google_analytics do |ga|
@@ -68,7 +69,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: /.svg$/
 
   # Use relative URLs
   # activate :relative_assets
@@ -79,4 +80,11 @@ configure :build do
   activate :gzip
 
   activate :imageoptim
+
+  case ENV['TARGET'].to_s.downcase
+  when 'production'
+    activate :robots, :rules => [{ user_agent: '*', allow: %w(/)}]
+  else
+    activate :robots, :rules => [{ user_agent: '*', disallow: %w(/)}]
+  end
 end

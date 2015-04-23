@@ -1,12 +1,13 @@
 # If you do not have OpenSSL installed, update
 # the following line to use "http://" instead
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.1.2'
+ruby "2.1.2"
 
 gem "middleman", "~>3.3.10"
-gem 'middleman-imageoptim'
+gem "middleman-imageoptim"
 gem "middleman-google-analytics"
+gem "middleman-robots"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
@@ -17,9 +18,9 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
-gem 'therubyracer' # faster JS compiles
-gem 'oj' # faster JS compiles
+gem "therubyracer" # faster JS compiles
+gem "oj" # faster JS compiles
 
 # Heroku Deployment
-gem 'rack-contrib'
-gem 'puma'
+gem "rack-contrib"
+gem "puma"

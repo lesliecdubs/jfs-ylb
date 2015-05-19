@@ -8,6 +8,8 @@ gem "middleman", "~>3.3.10"
 gem "middleman-imageoptim"
 gem "middleman-google-analytics"
 gem "middleman-robots"
+gem "middleman-s3_sync"
+gem "middleman-cloudfront"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

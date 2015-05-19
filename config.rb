@@ -7,7 +7,6 @@ else
   @DOMAIN_ROOT_URL = "localhost:4567"
 end
 
-
 ###
 # Compass
 ###
@@ -51,6 +50,39 @@ activate :directory_indexes
 
 activate :google_analytics do |ga|
   ga.tracking_id = 'UA-XXXXXXX-X' # Replace with your property ID.
+end
+
+case ENV['TARGET'].to_s.downcase
+when 'production'
+  activate :s3_sync do |s3_sync|
+    s3_sync.bucket                = 'S3_BUCKET_NAME'
+    s3_sync.aws_access_key_id     = 'AWS_ACCESS_KEY_ID'
+    s3_sync.aws_secret_access_key = 'AWS_SECRET_ACCESS_KEY'
+  end
+
+  activate :cloudfront do |cf|
+    cf.access_key_id     = 'ACCESS_KEY_ID'
+    cf.secret_access_key = 'SECRET_ACCESS_KEY'
+    cf.distribution_id   = 'DISTRIBUTION_ID'
+    cf.filter            = /\.html$/i
+  end
+else
+  activate :s3_sync do |s3_sync|
+    s3_sync.bucket                = 'S3_BUCKET_NAME'
+    s3_sync.aws_access_key_id     = 'AWS_ACCESS_KEY_ID'
+    s3_sync.aws_secret_access_key = 'AWS_SECRET_ACCESS_KEY'
+  end
+
+  activate :cloudfront do |cf|
+    cf.access_key_id     = 'ACCESS_KEY_ID'
+    cf.secret_access_key = 'SECRET_ACCESS_KEY'
+    cf.distribution_id   = 'DISTRIBUTION_ID'
+    cf.filter            = /\.html$/i
+  end
+end
+
+after_s3_sync do |files_by_status|
+  invalidate files_by_status[:updated]
 end
 
 # Reload the browser automatically whenever files change

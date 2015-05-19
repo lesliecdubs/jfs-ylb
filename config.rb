@@ -1,5 +1,13 @@
 require 'coffee-script'
 
+case ENV['TARGET'].to_s.downcase
+when 'production'
+  @DOMAIN_ROOT_URL = "www.mydomain.com"
+else
+  @DOMAIN_ROOT_URL = "localhost:4567"
+end
+
+
 ###
 # Compass
 ###
@@ -25,6 +33,7 @@ require 'coffee-script'
 # with_layout :admin do
 #   page "/admin/*"
 # end
+page "/sitemap.xml", layout: false
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -85,8 +94,12 @@ configure :build do
 
   case ENV['TARGET'].to_s.downcase
   when 'production'
-    activate :robots, :rules => [{ user_agent: '*', allow: %w(/)}]
+    activate :robots,
+             rules: [{ user_agent: '*', allow: %w(/)}],
+             sitemap: "http://#{@DOMAIN_ROOT_URL}/sitemap.xml"
   else
-    activate :robots, :rules => [{ user_agent: '*', disallow: %w(/)}]
+    activate :robots,
+             rules: [{ user_agent: '*', disallow: %w(/)}],
+             sitemap: "http://#{@DOMAIN_ROOT_URL}/sitemap.xml"
   end
 end

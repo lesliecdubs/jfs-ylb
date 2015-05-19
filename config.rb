@@ -45,6 +45,8 @@ page "/sitemap.xml", layout: false
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+activate :i18n
+
 # Clean URLs
 activate :directory_indexes
 

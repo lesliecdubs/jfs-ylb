@@ -154,7 +154,7 @@ GEM
     ipaddress (0.8.0)
     json (1.8.2)
     kramdown (1.6.0)
-    libv8 (3.16.14.7)
+    libv8 (3.16.14.13)
     listen (2.10.0)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -291,3 +291,6 @@ DEPENDENCIES
   therubyracer
   tzinfo-data
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.10.6

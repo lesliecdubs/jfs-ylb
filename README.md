@@ -8,13 +8,9 @@ This is the template for building Middleman static sites.
 
 ### Imageoptim
 
-```brew install advancecomp gifsicle jhead jpegoptim jpeg optipng pngcrush pngquant```
+```brew install advancecomp gifsicle jhead jpegoptim jpeg optipng pngcrush pngquant jonof/kenutils/pngout```
 
 ```npm install -g svgo```
-
-Download PNGout binary from http://www.jonof.id.au/kenutils
-
-```sudo mv pngout-darwin /usr/bin/pngout```
 
 ## Deployment
 Deployments use the [middleman-s3_sync](https://github.com/fredjean/middleman-s3_sync) gem to push your ```/build``` folder to Amazon s3.

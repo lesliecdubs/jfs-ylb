@@ -22,3 +22,4 @@ gem 'oj' # faster JS compiles
 # Heroku Deployment
 gem 'rack-contrib'
 gem 'puma'
+gem 'rake'

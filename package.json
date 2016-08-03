@@ -1,0 +1,30 @@
+{
+  "name": "canvas-middleman-template",
+  "version": "1.0.0",
+  "description": "Middleman/Webpack Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canvasnyc/canvas-middleman-template.git"
+  },
+  "author": "Canvas Engineering",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/canvasnyc/canvas-middleman-template/issues"
+  },
+  "homepage": "https://github.com/canvasnyc/canvas-middleman-template#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "compass-mixins": "^0.12.10",
+    "node-sass": "^3.8.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.0",
+    "webpack": "^1.13.1"
+  }
+}

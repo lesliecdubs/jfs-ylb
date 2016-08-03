@@ -21,7 +21,6 @@ page '/*.txt', layout: false
 # Clean URLs
 activate :directory_indexes
 
-
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -55,7 +54,18 @@ configure :build do
 
   activate :gzip
 
-  # config[:host] = "http://www.example.com"
+  case ENV['TARGET'].to_s.downcase
+  when 'production'
+   config[:host] = "http://www.mydomain.com"
+   activate :robots,
+                rules: [{ user_agent: '*', allow: %w(/)}],
+                sitemap: "http://#{@config[:host]}/sitemap.xml"
+  else
+    config[:host] = "localhost:4567"
+    activate :robots,
+                 rules: [{ user_agent: '*', disallow: %w(/)}],
+                 sitemap: "http://#{config[:host]}/sitemap.xml"
+  end
 end
 
 activate :external_pipeline,

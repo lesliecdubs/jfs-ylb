@@ -1,13 +1,19 @@
-require 'middleman-core/load_paths'
-::Middleman.setup_load_paths
+require 'rack'
+require 'rack/contrib/try_static'
+require 'rack/contrib/static_cache'
 
-require 'middleman-core'
-require 'middleman-core/rack'
+use Rack::Deflater
 
-require 'fileutils'
-FileUtils.mkdir('log') unless File.exist?('log')
-::Middleman::Logger.singleton("log/#{ENV['RACK_ENV']}.log")
+use Rack::StaticCache, :urls => ['/images', '/stylesheets', '/javascripts', '/fonts'],
+                       :root => "build"
 
-app = ::Middleman::Application.new
+# Serve files from the build directory
+use Rack::TryStatic,
+  root: 'build',
+  urls: %w[/],
+  try: ['.html', 'index.html', '/index.html']
 
-run ::Middleman::Rack.new(app).to_app
+run lambda{ |env|
+  four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
+  [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]
+}

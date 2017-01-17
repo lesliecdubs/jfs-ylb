@@ -24,6 +24,6 @@ export default {
     ]
   },
   plugins: [
-      new ExtractTextPlugin("stylesheets/application.css")
+    new ExtractTextPlugin("stylesheets/application.css")
   ]
 };

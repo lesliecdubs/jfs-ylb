@@ -51,10 +51,7 @@ end
 configure :build do
   activate :asset_hash
 
-  # activate :asset_host
-  # set :asset_host do
-  #   '//YOURDOMAIN.cloudfront.net'
-  # end
+  # activate :asset_host, host: '//YOURDOMAIN.cloudfront.net'
 
   activate :gzip
 

@@ -6,11 +6,15 @@
 
  ##Dependencies
 
+ ### Yarn
+ ```brew install yarn```
+
+
  ### Imageoptim
 
  ```brew install advancecomp gifsicle jhead jpegoptim jpeg optipng pngcrush pngquant jonof/kenutils/pngout```
 
-```npm install -g svgo```
+```yarn install -g svgo```
 
 ## Deployment
 

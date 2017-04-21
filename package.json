@@ -38,11 +38,11 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "eslint-watch": "^2.1.14",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.3.0",
     "npm-run-all": "^4.0.0",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^6.0.3",
     "style-loader": "^0.13.1",
-    "webpack": "^1.14.0"
+    "webpack": "^2.4.1"
   }
 }

@@ -11,16 +11,23 @@ export default {
     vendor: ['babel-polyfill'],
   },
   resolve: {
-    extensions: ['', '.js', '.scss']
+    extensions: ['.js', '.json', '.scss']
   },
   output: {
     path: __dirname + '/.tmp/dist',
     filename: 'javascripts/[name].js'
   },
   module: {
-    loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'source/javascripts'), loader: 'babel' },
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', "css!sass?sourceMap&includePaths[]=" + __dirname + "/node_modules")}
+    rules: [
+      {test: /\.js$/, include: path.join(__dirname, 'source/javascripts'), loader: 'babel-loader' },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader!sass-loader"
+        })
+      }
     ]
   },
   plugins: [

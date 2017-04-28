@@ -27,7 +27,7 @@ activate :directory_indexes
 # Use Webpack as external pipeline
 activate :external_pipeline,
          name: :webpack,
-         command: build? ? "npm run build" : "npm start",
+         command: build? ? "yarn run build" : "yarn start",
          source: ".tmp/dist",
          latency: 1
 

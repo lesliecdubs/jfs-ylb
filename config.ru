@@ -3,9 +3,11 @@ require 'rack/contrib/try_static'
 require 'rack/contrib/static_cache'
 
 use Rack::Deflater
+
 use Rack::StaticCache, :urls => ['/images', '/stylesheets', '/javascripts', '/fonts'],
                        :root => "build"
 
+# Serve files from the build directory
 use Rack::TryStatic,
   root: 'build',
   urls: %w[/],

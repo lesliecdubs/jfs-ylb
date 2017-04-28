@@ -17,7 +17,7 @@ gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
 
 # Slim templating plugin
-gem "slim"
+gem 'slim', '>= 3.0'
 
 # Heroku Deployment
 gem 'rack-contrib'

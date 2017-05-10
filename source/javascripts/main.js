@@ -6,10 +6,7 @@ const main = () => {
   const initModules = () => {
     for (let k in modules) {
       if (modules.hasOwnProperty(k)) {
-        // console.log(modules, k)
-        if (!modules[k].init) {
-          modules[k] = modules[k]()
-        }
+        if (!modules[k].init) modules[k] = modules[k]()
 
         modules[k].init()
       }

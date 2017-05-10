@@ -21,9 +21,7 @@
     "lint:watch": "npm run lint -- --watch"
   },
   "dependencies": {
-    "babel-polyfill": "^6.20.0"
-  },
-  "devDependencies": {
+    "babel-polyfill": "^6.20.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
@@ -32,17 +30,19 @@
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
     "css-loader": "^0.26.1",
-    "eslint": "^3.13.1",
-    "eslint-config-airbnb": "latest",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0",
-    "eslint-watch": "^2.1.14",
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.3.0",
     "npm-run-all": "^4.0.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.1",
     "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-watch": "^2.1.14"
   }
 }

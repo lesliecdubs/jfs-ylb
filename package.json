@@ -18,7 +18,8 @@
     "open:webpack": "node_modules/.bin/webpack --watch -d --progress --color",
     "build": "node_modules/.bin/webpack --bail -p",
     "lint": "node_modules/.bin/esw source --color",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "heroku-postbuild": "npm rebuild node-sass"
   },
   "dependencies": {
     "babel-polyfill": "^6.20.0",

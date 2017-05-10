@@ -1,0 +1,91 @@
+//  ======================================================================================================
+//
+//  Variables
+//
+//  ======================================================================================================
+
+//  Responsive Breakpoints
+//  --------------------------------------------------
+    $break-xs:           350px  !default;
+    $break-sm:           580px  !default;
+    $break-md:           768px  !default;
+    $break-lg:           1024px !default;
+    $break-xl:           1280px !default;
+    $break-xxl:          1440px !default;
+
+//  Color
+//  --------------------------------------------------
+    // Neutrals
+    $white:              rgba(255,255,255,1) !default; // #FFFFFF
+    $black:              rgba(0,  0,  0,  1) !default; // #000000
+    $grey-placeholder:   rgba(66, 62, 58, 1) !default; // #423e3a
+    $grey:               rgba(148,148,149,1) !default; // #949495
+    $transparent:        rgba(0,0,0,0) !default;
+    // Theme
+
+//  Default Color Settings
+//  --------------------------------------------------
+    $body-bg:                 $grey            !default;
+    $default-txt-color:       $black            !default;
+    $placeholder-txt-color:   $grey-placeholder !default;
+
+    $hr-color:                $black       !default;
+    $highlight:               $black !default;
+    $highlight-text:          $white       !default;
+
+//  Font Families
+//  --------------------------------------------------
+    $font-brandon-medium:    'Brandon Grotesque Web Medium', Helvetica, Arial, sans-serif !default;
+    $font-cervo-neue-bold:   'Cervo Neue Bold Neue',         Helvetica, Arial, sans-serif !default;
+
+//  Font Stacks
+//  --------------------------------------------------
+    $font-bold:               $font-cervo-neue-bold   !default;
+    $font-regular:            $font-brandon-medium    !default;
+    $font-light:              $font-brandon-medium    !default;
+    $font-italic:             $font-light             !default;
+    $font-family-default:     $font-regular           !default;
+
+//  Type Sizes (use rem mixin to apply)
+//  --------------------------------------------------
+    $font-size-base:          16px                 !default;
+    $font-size-root:          62.5%                !default;
+
+//  Defaults
+//  --------------------------------------------------
+    $font-weight-default:     normal               !default;
+    $line-height-base:        1.5                  !default;
+
+//  Headings
+//  --------------------------------------------------
+    $headings-font-family:    $font-bold           !default;
+    $headings-font-weight:    normal               !default;
+    $headings-line-height:    $line-height-base    !default;
+    $headings-font-color:     $black               !default;
+
+//  Blockquotes
+//  --------------------------------------------------
+    $blockquote-font-family:  $font-family-default !default;
+    $blockquote-txt-size:     $font-size-base      !default;
+    $blockquote-txt-color:    $default-txt-color   !default;
+
+//  Links
+//  --------------------------------------------------
+    $link-color:              $black               !default;
+    $link-hover-color:        rgba($black, 0.7)    !default;
+
+//  Forms
+//  --------------------------------------------------
+    $font-family-form:        $font-family-default !default;
+    $font-family-label:       $font-family-default !default;
+
+//  Animation
+//  --------------------------------------------------
+    $default-animation:       all 0.3s             !default;
+    $default-animation-duration:  0.3s             !default;
+
+//  Site Max Width
+//  --------------------------------------------------
+    $max-width:         1282px;
+    $nav-height:        86px;
+    $nav-height-mobile: 56px;

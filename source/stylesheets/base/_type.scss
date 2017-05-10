@@ -1,0 +1,46 @@
+//  ==========================================================================
+//
+//  Type Styles
+//
+//  ==========================================================================
+//  ==========================================================================
+//  Font Families
+//  ==========================================================================
+%font-brandon-medium {
+  font-family: $font-brandon-medium;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+%font-cervo-neue-bold {
+  font-family: $font-cervo-neue-bold;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+//  ==========================================================================
+//  Font Mods
+//  ==========================================================================
+%uppercase   { text-transform: uppercase;  }
+%lowercase   { text-transform: lowercase;  }
+%underline   { text-decoration: underline; }
+%center-text { text-align: center;         }
+%right-text  { text-align: right;          }
+%left-text   { text-align: left;           }
+
+.type--uppercase      { @extend %uppercase;    }
+.type--lowercase      { @extend %lowercase;    }
+.type--underline-line { @extend %underline;    }
+
+.type--mixed          { text-transform: none;  }
+.type--center         { @extend %center-text;  }
+.type--right          { @extend %right-text;   }
+.type--left           { @extend %left-text;    }
+
+.type--inline         { display: inline;       }
+.type--inline-block   { display: inline-block; }
+.type--block          { display: block;        }
+.type--no-wrap        { white-space: nowrap;   }
+.type--word-spacing-5 { word-spacing: 5px;     }

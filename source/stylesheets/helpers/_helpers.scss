@@ -1,0 +1,103 @@
+//  =================================================================================================
+//
+//  Helper Classes
+//
+//  =================================================================================================
+
+//  ==========================================================================
+//  Mods
+//  ==========================================================================
+%clearfix { @include clearfix(); }
+
+//  ==========================================================================
+//  Modal Open Styles
+//  ==========================================================================
+.modal-open {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+//  ==========================================================================
+//  Visibility Controllers
+//  ==========================================================================
+.is-visually-hidden {
+  border: 0 !important;
+  clip: rect(1px 1px 1px 1px) !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  left: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 1px !important;
+}
+
+.is-transparent { opacity: 0; }
+
+.is-hidden { display: none !important; }
+
+.is-hidden-desktop {
+  display: block !important;
+  @include breakpoint(lg) { display: none !important; }
+}
+
+.is-hidden-desktop-med {
+  display: block !important;
+  @include breakpoint(lg) { display: none !important; }
+  @include breakpoint(md) { display: none !important; }
+}
+
+.is-hidden-desktop--inline-block {
+  display: inline-block !important;
+  @include breakpoint(lg) { display: none !important; }
+}
+
+.is-hidden-mobile--soft {
+  display: none;
+  @include breakpoint(md) { display: block; }
+}
+
+.is-hidden-mobile--inline-block {
+  display: none;
+  @include breakpoint(md) { display: inline-block; }
+}
+
+.is-hidden-mobile {
+  display: none !important;
+  @include breakpoint(md) { display: block !important; }
+}
+
+.is-hidden--mobile-desktop {
+  display: none !important;
+  @include breakpoint(md) { display: block !important; }
+  @include breakpoint(lg) { display: none !important; }
+}
+
+.is-visible-desktop {
+  display: none !important;
+  @include breakpoint(lg) { display: block !important; }
+}
+
+.is-visible-desktop--flex {
+  display: none !important;
+  @include breakpoint(lg) { display: flex !important; }
+}
+
+.is-visible-desktop--inline-block {
+  display: none !important;
+  @include breakpoint(lg) { display: inline-block !important; }
+}
+
+.is-visible-mobile--inline-block {
+  display: inline-block !important;
+  @include breakpoint(md) { display: none !important; }
+}
+
+.is-visible-mobile {
+  display: block !important;
+  @include breakpoint(md) { display: none !important; }
+}

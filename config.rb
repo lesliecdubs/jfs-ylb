@@ -57,8 +57,8 @@ configure :build do
 
   case ENV['TARGET'].to_s.downcase
   when 'production'
-   config[:host] = "http://www.mydomain.com"
-   activate :robots,
+    config[:host] = "http://www.mydomain.com"
+    activate :robots,
                 rules: [{ user_agent: '*', allow: %w(/)}],
                 sitemap: "http://#{config[:host]}/sitemap.xml"
   else

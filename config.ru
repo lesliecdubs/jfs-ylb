@@ -2,6 +2,26 @@ require 'rack'
 require 'rack/contrib/try_static'
 require 'rack/contrib/static_cache'
 
+module Rack
+  class FontHeaders
+    def initialize(app)
+      @app = app
+    end
+
+    def call(env)
+      request = Rack::Request.new(env)
+      response = @app.call(env)
+      if request.path =~ /\/(fonts|videos|stylesheets)\//
+        # there maybe a better way to add headers
+        response[1]["Access-Control-Allow-Origin"] = "*"
+      end
+      response
+    end
+  end
+end
+
+use Rack::FontHeaders
+
 use Rack::Deflater
 
 use Rack::StaticCache, :urls => ['/images', '/stylesheets', '/javascripts', '/fonts'],

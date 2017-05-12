@@ -60,7 +60,7 @@ configure :build do
    config[:host] = "http://www.mydomain.com"
    activate :robots,
                 rules: [{ user_agent: '*', allow: %w(/)}],
-                sitemap: "http://#{@config[:host]}/sitemap.xml"
+                sitemap: "http://#{config[:host]}/sitemap.xml"
   else
     config[:host] = "localhost:4567"
     activate :robots,

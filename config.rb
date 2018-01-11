@@ -12,6 +12,13 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Clean URLs
+activate :directory_indexes
+
+activate :autoprefixer, browsers: [
+  "last 2 versions"
+]
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -20,9 +27,6 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
-
-# Clean URLs
-activate :directory_indexes
 
 # Use Webpack as external pipeline
 activate :external_pipeline,
@@ -49,22 +53,22 @@ end
 
 # Build-specific configuration
 configure :build do
-  activate :asset_hash
-
+  # Removing asset hashes for static hand-off
+  # activate :asset_hash
   # activate :asset_host, host: '//YOURDOMAIN.cloudfront.net'
 
   activate :gzip
 
-  case ENV['TARGET'].to_s.downcase
-  when 'production'
-    config[:host] = "http://www.mydomain.com"
-    activate :robots,
-                rules: [{ user_agent: '*', allow: %w(/)}],
-                sitemap: "http://#{config[:host]}/sitemap.xml"
-  else
-    config[:host] = "localhost:4567"
-    activate :robots,
-                 rules: [{ user_agent: '*', disallow: %w(/)}],
-                 sitemap: "http://#{config[:host]}/sitemap.xml"
-  end
+  # case ENV['TARGET'].to_s.downcase
+  # when 'production'
+  #   config[:host] = "http://www.mydomain.com"
+  #   activate :robots,
+  #               rules: [{ user_agent: '*', allow: %w(/)}],
+  #               sitemap: "http://#{config[:host]}/sitemap.xml"
+  # else
+  #   config[:host] = "localhost:4567"
+  #   activate :robots,
+  #                rules: [{ user_agent: '*', disallow: %w(/)}],
+  #                sitemap: "http://#{config[:host]}/sitemap.xml"
+  # end
 end

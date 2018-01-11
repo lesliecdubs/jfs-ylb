@@ -1,41 +1,42 @@
 {
-  "name": "canvas-middleman-template",
+  "name": "canvas-middleman-barba-template",
   "version": "1.0.0",
-  "main": "./source/javascripts/application.js",
+  "main": "./source/javascripts/index.js",
   "author": "Canvas Engineering",
   "license": "ISC",
-  "description": "Middleman/Webpack Template",
+  "description": "Middleman/Webpack/Barba Template",
   "bugs": {
-    "url": "https://github.com/canvasnyc/canvas-middleman-template/issues"
+    "url": "https://github.com/canvasnyc/canvas-middleman-barba-template/issues"
   },
-  "homepage": "https://github.com/canvasnyc/canvas-middleman-template#readme",
+  "homepage": "https://github.com/canvasnyc/canvas-middleman-barba-template#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/canvasnyc/canvas-middleman-template.git"
+    "url": "git+https://github.com/canvasnyc/canvas-middleman-barba-template.git"
   },
   "scripts": {
-    "start": "npm-run-all --parallel open:webpack lint:watch",
-    "open:webpack": "node_modules/.bin/webpack --watch -d --progress --color",
-    "build": "node_modules/.bin/webpack --bail -p",
-    "lint": "node_modules/.bin/esw source --color",
-    "lint:watch": "npm run lint -- --watch",
-    "heroku-postbuild": "npm rebuild node-sass"
+    "start": "$(npm root)/.bin/webpack --watch -d --progress --color",
+    "build": "$(npm root)/.bin/webpack --bail -p",
+    "test": "./bin/lint"
   },
   "dependencies": {
-    "babel-polyfill": "^6.20.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
+    "barba.js": "^1.0.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "lodash": "^4.17.4",
     "node-sass": "^4.3.0",
     "npm-run-all": "^4.0.0",
     "sass-loader": "^6.0.3",
+    "savnac": "^2.0.3",
     "style-loader": "^0.13.1",
+    "ua-parser-js": "^0.7.17",
     "webpack": "^2.4.1"
   },
   "devDependencies": {

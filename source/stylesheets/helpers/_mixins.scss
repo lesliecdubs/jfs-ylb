@@ -240,6 +240,15 @@ $breakpoints: (
 }
 
 // --------------------------------------------------
+// Only apply styles to non-touch devices
+// --------------------------------------------------
+@mixin no-touch($selector) {
+  @at-root .no-touch #{& + $selector} {
+    @content;
+  }
+}
+
+// --------------------------------------------------
 // Alpha
 // --------------------------------------------------
 @mixin alpha-attribute($attribute, $color) {

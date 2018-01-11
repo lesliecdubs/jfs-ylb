@@ -1,7 +1,7 @@
 {
-  "name": "Canvas Middleman Template",
+  "name": "Canvas Middleman Barba Template",
   "description": "A template for Middleman to create static sites",
-  "repository": "https://github.com/canvasnyc/canvas-middleman-template.git",
+  "repository": "https://github.com/canvasnyc/canvas-middleman-barba-template.git",
   "logo": "http://canvas.is/images/logo_icons2.png",
-  "keywords": ["middleman", "heroku", "static"]
+  "keywords": ["middleman", "static"]
 }

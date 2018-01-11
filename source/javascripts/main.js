@@ -1,24 +1,61 @@
-import form from './modules/form'
+//  ==========================================================================
+//
+//  App Setup
+//
+//  ==========================================================================
+import { breakpoint } from 'savnac'
+import { kebabCase } from 'lodash'
+import UAParser from 'ua-parser-js'
+import * as controllers from './controllers'
 
 const main = () => {
-  const modules = {form}
+  const parsed = new UAParser(navigator.userAgent)
 
-  const initModules = () => {
-    for (let k in modules) {
-      if (modules.hasOwnProperty(k)) {
-        if (!modules[k].init) modules[k] = modules[k]()
-
-        modules[k].init()
-      }
-    }
+  let props = {
+    universalController: controllers.universal,
+    currentController: null,
+    breakpoint: breakpoint(),
+    os: kebabCase(parsed.getOS().name),
+    browser: kebabCase(parsed.getBrowser().name)
   }
 
+  document.body.classList.add(props.browser)
+  document.body.classList.add(props.os)
+
   const init = () => {
-    initModules()
+    const pageRouter = Barba.Pjax.Dom.getContainer().dataset.router
+    const nextController = controllers[pageRouter]
+
+    props.universalController.init()
+
+    if (!!nextController) {
+      props.currentController = nextController
+      props.currentController.init()
+    }
+
+    props.breakpoint.enable()
+
+    // add GA pageview tracking
+    // ga('send', {
+    //   hitType: 'pageview',
+    //   page: window.location.pathname,
+    //   location: window.location.href
+    // })
+  }
+
+  const disable = () => {
+    if (props.currentController) {
+      props.currentController.disable()
+    }
+
+    props.universalController.disable()
+    props.currentController = null
   }
 
   return {
-    init
+    init,
+    disable,
+    breakpoint: props.breakpoint
   }
 }
 

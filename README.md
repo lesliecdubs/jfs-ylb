@@ -9,12 +9,16 @@
  ### Yarn
  ```brew install yarn```
 
-
  ### Imageoptim
 
  ```brew install advancecomp gifsicle jhead jpegoptim jpeg optipng pngcrush pngquant jonof/kenutils/pngout```
 
 ```yarn install -g svgo```
+
+#### Local Dev
+```
+yarn start && middleman s
+```
 
 ## Deployment
 

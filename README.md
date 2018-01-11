@@ -17,7 +17,7 @@
 
 #### Local Dev
 ```
-yarn start && middleman s
+middleman s
 ```
 
 ## Deployment

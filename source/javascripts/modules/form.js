@@ -1,10 +1,10 @@
 
 
 const form = () => {
-  const message = () => console.log('im the form')
+  // const message = () => console.log('im the form')
 
   const init = () => {
-    message()
+    // message()
   }
 
   return {

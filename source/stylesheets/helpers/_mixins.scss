@@ -127,6 +127,10 @@
   background: linear-gradient(to $direction, $color1 0%, $color2 100%);
 }
 
+@mixin linear-gradient-three($direction, $color1, $color2, $color3) {
+  background: linear-gradient(to $direction, $color1 0%, $color2 50%, $color3 100%);
+}
+
 @mixin linear-gradient-hover($direction, $color1, $color2, $color3, $color4) {
   background: linear-gradient(to $direction, $color1 0%, $color2 50%, $color3 50%, $color4 100%);
   transition: background 400ms cubic-bezier(0.895, 0.030, 0.685, 0.220);

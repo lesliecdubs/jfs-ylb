@@ -1,0 +1,18 @@
+/*  ==========================================================================
+//
+//  Layouts
+//
+//  ========================================================================== */
+.page-content {
+  @include linear-gradient-three(right, $baby-blue, $blue, $ocean-blue);
+  height: 100%;
+  width: 100%;
+}
+
+.main-info {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,7 +1,31 @@
-div.welcome
-  div.logo
-    = image_tag "middleman-logo.svg"
-  h1 Middleman is Running
-  p.doc
-    = link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank"
-    
+/ div.welcome
+/   div.logo
+/     = image_tag "middleman-logo.svg"
+/   h1 Middleman is Running
+/   p.doc
+/     = link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank"
+/
+
+main.main
+  .main-info
+    header
+      = image_tag('jfs-logomark.svg', class: 'logo-mark', alt:' Jewish Family Service of Greater Dallas open door logo mark')
+      h1.logo-type.type--center.type--white
+        span.logo-type__jfs.type--block Jewish Family Service of Greater Dallas
+        span.logo-type__ylb.type--block Young Leadership Board
+
+      p.main-info__mission.type--center.type--white-70
+        span> We support the mission of
+        = link_to 'https://jfsdallas.org/', target: '_blank' do |link|
+          span Jewish Family Service
+        span< by engaging young adults to enrich the community.
+
+    ul.social
+      li.social__item
+        = link_to '#', class: 'social__item__link' do |link|
+          svg class="social__item__link__svg" viewBox="0 0 512 512"
+            path class="social__item__link__svg-path" d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"
+      li.social__item
+        = link_to '#', class: 'social__item__link' do |link|
+          svg class="social__item__link__svg" viewBox="0 0 512 512"
+            path class="social__item__link__svg-path" d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"
